@@ -71,7 +71,7 @@ app.put("/players/:playerId/", async (request, response) => {
 
   const p_q = `UPDATE player_details SET player_name='${playerName}' WHERE player_id=${playerId}`;
   const a = await abj.run(p_q);
-  response.send(a);
+  response.send("Player Details Updated");
 });
 //API4
 app.get("/matches/:matchId/", async (request, response) => {
